@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <!-- TOP BAR -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admissions &amp; Alumni"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- TABS -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutCareer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E0E0E0"
+        app:tabMode="scrollable" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ADMISSIONS TAB CONTENT -->
+            <LinearLayout
+                android:id="@+id/layoutAdmissions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Online Admission Application"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Applications for the 2026 intake are OPEN."
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:layout_marginBottom="16dp" />
+
+                <EditText
+                    android:id="@+id/etAdmName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etAdmEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etAdmCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Desired Course (e.g., BSc Computer Science)"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/btnSubmitApplication"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Submit Application"
+                    android:backgroundTint="#673AB7"
+                    android:textColor="#FFFFFF" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CCCCCC"
+                    android:layout_marginVertical="24dp" />
+
+                <!-- CHECK STATUS SECTION -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check Application Status"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etCheckStatusEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Email to check status"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/btnCheckStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Check Status"
+                    android:backgroundTint="#673AB7"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <!-- JOBS & CAREERS TAB (Placeholder) -->
+            <LinearLayout
+                android:id="@+id/layoutJobs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Internships &amp; Job Opportunities"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No new job postings at the moment. Check back later!"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- ALUMNI TAB (Placeholder) -->
+            <LinearLayout
+                android:id="@+id/layoutAlumni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alumni Network"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connect with fellow UMMA graduates. Register for the alumni database below."
+                    android:layout_marginTop="8dp" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Register as Alumni"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#673AB7"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

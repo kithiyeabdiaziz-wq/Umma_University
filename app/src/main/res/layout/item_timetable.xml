@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="#E8F0FE">
+    <TextView
+        android:id="@+id/tvTtUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CSC2213-01"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvTtDayTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday | 10:00 AM"
+        android:textSize="16sp"
+        android:textColor="#006400" />
+    <TextView
+        android:id="@+id/tvTtVenue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Venue: Room 4B"
+        android:textSize="14sp"
+        android:textColor="#666666" />
+</LinearLayout>

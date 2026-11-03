@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage Unit"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#673AB7"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/action_marks"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="📝  Enter Marks"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="#333333" />
+
+    <TextView
+        android:id="@+id/action_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="✅  Take Attendance"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="#333333" />
+
+    <TextView
+        android:id="@+id/action_assignment"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="📚  Post Assignment"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="#333333" />
+
+    <TextView
+        android:id="@+id/action_material"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="📁  Upload Material"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="#333333" />
+
+    <TextView
+        android:id="@+id/action_hours"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="⏰  View Office Hours"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="#333333" />
+</LinearLayout>

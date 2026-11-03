@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvAssignUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit Code"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etAssignTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Assignment Title" />
+
+    <EditText
+        android:id="@+id/etAssignDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Instructions/Description"
+        android:minLines="3"
+        android:gravity="top"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnPostAssignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post Assignment"
+        android:layout_marginTop="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAssignments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp" />
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "45976420135",
+    "project_id": "umma-university-5a469",
+    "storage_bucket": "umma-university-5a469.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45976420135:android:aa60607e5dc78d069f3302",
+        "android_client_info": {
+          "package_name": "com.example.umma_university"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa-QPIRHpmZhlxwrKsfvApX2tkqhPK43o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

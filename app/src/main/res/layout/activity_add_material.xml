@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvMatUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Materials for..."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etMatTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Material Title (e.g., Week 1 Notes)" />
+
+    <Button
+        android:id="@+id/btnSelectFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select PDF/Video File"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvFileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No file selected"
+        android:textColor="#666666"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnPostMaterial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Material to Cloud"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previously Uploaded:"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMaterials"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

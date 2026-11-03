@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <!-- TOP BAR -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lecturer Portal"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome back!"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- PROFILE BUTTON AT TOP RIGHT -->
+        <Button
+            android:id="@+id/btnLecProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Profile"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:backgroundTint="#673AB7"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- MAIN CONTENT (Recycler View) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerLecUnits"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_above="@id/bottomNav"
+        android:padding="16dp"
+        android:clipToPadding="false" />
+
+    <!-- BOTTOM NAVIGATION (Centered Logout) -->
+    <FrameLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:padding="12dp"
+        android:layout_alignParentBottom="true">
+
+        <!-- LOGOUT BUTTON IN THE MIDDLE -->
+        <Button
+            android:id="@+id/btnLogoutLec"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Logout"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF" />
+    </FrameLayout>
+
+</RelativeLayout>

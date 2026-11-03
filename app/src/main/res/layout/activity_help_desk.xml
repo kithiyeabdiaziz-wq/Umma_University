@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help Desk &amp; Student Welfare"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 1. SUBMIT COMPLAINT -->
+        <Spinner
+            android:id="@+id/spinnerDept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Department"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinnerDepartment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginBottom="16dp" />
+        <EditText
+            android:id="@+id/etComplaint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Submit a complaint, suggestion, or request..."
+            android:minLines="3"
+            android:gravity="top" />
+
+        <Button
+            android:id="@+id/btnSubmitComplaint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Request"
+            android:layout_marginTop="8dp" />
+
+        <!-- 2. TRACK REQUESTS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Submitted Requests:"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerComplaints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="8dp" />
+
+        <!-- 3. EMERGENCY CONTACTS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚨 Emergency Contacts"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#B71C1C"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Campus Security: 0712-999-111\n• Medical Emergency: 0712-999-222\n• Fire Department: 020-222-333"
+            android:textColor="#B71C1C"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 4. STUDENT WELFARE CONTACTS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🤝 Student Welfare &amp; Support"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Dean of Students: dean@umma.ac.ke | Room 101\n• Counselling Center: counselling@umma.ac.ke | 0712-999-333\n• Disability Support: support@umma.ac.ke"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 5. FAQS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❓ Frequently Asked Questions (FAQs)"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q: How long does it take to resolve a request?\nA: Most requests are resolved within 48 hours.\n\nQ: Can I submit an anonymous complaint?\nA: Currently, requests are linked to your registration number for accountability.\n\nQ: Who do I contact for fee issues?\nA: Visit the Finance Office in Admin Block A or email finance@umma.ac.ke."
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp" />
+
+    </LinearLayout>
+</ScrollView>

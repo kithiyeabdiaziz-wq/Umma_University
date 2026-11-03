@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- TOP BAR WITH LOGOUT -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#F0F0F0">
+
+        <TextView
+            android:id="@+id/tvAdminTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Dashboard"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true" />
+
+        <Button
+            android:id="@+id/btnAdminLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Logout"
+            android:textSize="12sp"
+            android:padding="0dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- TABS FOR EACH ADMIN FUNCTION -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/adminTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E0E0E0"
+        app:tabMode="scrollable" />
+
+    <!-- CONTAINER FOR THE FORMS -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- SECTION 1: COURSES -->
+            <LinearLayout
+                android:id="@+id/layoutCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add New Course" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/etCourseCode" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Course Code" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etCourseTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Course Title" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etCourseDept" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Department" android:layout_marginTop="8dp" />
+                <Button android:id="@+id/btnSaveCourse" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save Course" android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- SECTION 2: UNITS -->
+            <LinearLayout
+                android:id="@+id/layoutUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add New Unit" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/etUnitCode" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Unit Code" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etUnitName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Unit Name" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etUnitCourseCode" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Course Code" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etUnitLecturerEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Lecturer Email" android:layout_marginTop="8dp" />
+                <Button android:id="@+id/btnSaveUnit" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save Unit" android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- SECTION 3: LECTURERS -->
+            <LinearLayout
+                android:id="@+id/layoutLecturer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Register Lecturer" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/etLecName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Lecturer Name" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etLecEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Email" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etLecPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Password" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etLecDept" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Department" android:layout_marginTop="8dp" />
+                <Button android:id="@+id/btnSaveLecturer" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Register Lecturer" android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- SECTION 3b: STAFF -->
+            <LinearLayout
+                android:id="@+id/layoutStaff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Register Support Staff" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/etStaffName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Staff Name" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etStaffEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Email" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etStaffPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Password" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etStaffDept" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Department" android:layout_marginTop="8dp" />
+                <Button android:id="@+id/btnSaveStaff" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Register Support Staff" android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- SECTION 4: ANNOUNCEMENTS -->
+            <LinearLayout
+                android:id="@+id/layoutAnnouncement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Post Announcement" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/etAnnouncementTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Title" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etAnnouncementMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Message" android:minLines="3" android:gravity="top" android:layout_marginTop="8dp" />
+                <Button android:id="@+id/btnPostAnnouncement" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Post Announcement" android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- SECTION 5: TIMETABLE & EXAMS -->
+            <LinearLayout
+                android:id="@+id/layoutTimetable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Timetable Entry" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/etTtUnitCode" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Unit Code" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etTtDay" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Day" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etTtTime" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Time" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etTtVenue" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Venue" android:layout_marginTop="8dp" />
+                <Button android:id="@+id/btnSaveTimetable" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save Timetable" android:layout_marginTop="16dp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Exam Schedule" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/etExamUnitCode" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Unit Code" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etExamDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Date" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etExamTime" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Time" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etExamVenue" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Venue" android:layout_marginTop="8dp" />
+                <Button android:id="@+id/btnSaveExam" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save Exam Schedule" android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- SECTION 6: FEES -->
+            <LinearLayout
+                android:id="@+id/layoutFees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Student Fee Record" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/etFeeRegNumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Student Reg Number" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etFeeTotal" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Total Fees" android:inputType="numberDecimal" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etFeePaid" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Amount Paid" android:inputType="numberDecimal" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etFeeSemester" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Semester" android:layout_marginTop="8dp" />
+                <Button android:id="@+id/btnSaveFees" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save Fee Record" android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- SECTION 7: HELP DESK -->
+            <LinearLayout
+                android:id="@+id/layoutHelpDesk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Student Help Desk" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="16dp" />
+                <Button android:id="@+id/btnOpenAdminHelpDesk" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Open Help Desk Requests" />
+            </LinearLayout>
+
+            <!-- SECTION 8: REPORTS -->
+            <LinearLayout
+                android:id="@+id/layoutReports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="System Reports &amp; Management" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="16dp" />
+                <Button android:id="@+id/btnGenerateReports" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Generate Reports" android:backgroundTint="#4CAF50" android:textColor="#FFFFFF" />
+                <TextView android:id="@+id/tvReportResults" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Click the button above to generate reports." android:textSize="16sp" android:padding="16dp" android:background="#F5F5F5" android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- SECTION 9: ADMISSIONS (NEW) -->
+            <LinearLayout
+                android:id="@+id/layoutAdmissions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Admissions Management" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="16dp" />
+                <Button android:id="@+id/btnOpenAdmissions" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="View &amp; Approve Applications" android:backgroundTint="#673AB7" android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

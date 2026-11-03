@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <!-- TOP BAR -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Portal"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_centerVertical="true" />
+
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Profile"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:backgroundTint="#673AB7"
+            android:textColor="#FFFFFF"
+            android:layout_toStartOf="@id/btnLogout"
+            android:layout_marginEnd="8dp"
+            android:layout_centerVertical="true" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Logout"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAnnouncement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📢 Loading announcements..."
+                android:textSize="14sp"
+                android:background="#FFF9C4"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- BUTTON GRID -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginBottom="16dp">
+
+                <Button android:id="@+id/btnViewResults" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Results &amp; GPA" android:textAllCaps="false" android:layout_margin="4dp" />
+                <Button android:id="@+id/btnAcademicInfo" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Academic Info" android:textAllCaps="false" android:layout_margin="4dp" />
+                <Button android:id="@+id/btnViewTimetable" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Timetable &amp; Exams" android:textAllCaps="false" android:layout_margin="4dp" />
+                <Button android:id="@+id/btnViewFees" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Fee Statement" android:textAllCaps="false" android:layout_margin="4dp" />
+                <Button android:id="@+id/btnMyUnits" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="My Units" android:textAllCaps="false" android:layout_margin="4dp" />
+
+                <!-- NEW ATTENDANCE BUTTON -->
+                <Button android:id="@+id/btnViewAttendance" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="My Attendance" android:textAllCaps="false" android:layout_margin="4dp" />
+
+                <Button android:id="@+id/btnHelpDesk" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Help Desk" android:textAllCaps="false" android:layout_margin="4dp" />
+                <Button android:id="@+id/btnViewAssignments" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Assignments" android:textAllCaps="false" android:layout_margin="4dp" />
+                <Button android:id="@+id/btnCourseMaterials" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Course Materials" android:textAllCaps="false" android:layout_margin="4dp" />
+                <Button android:id="@+id/btnLibrary" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Library" android:textAllCaps="false" android:layout_margin="4dp" />
+                <Button android:id="@+id/btnNews" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="News &amp; Events" android:textAllCaps="false" android:layout_margin="4dp" />
+                <Button android:id="@+id/btnCampusFacilities" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Campus Facilities" android:textAllCaps="false" android:layout_margin="4dp" />
+                <Button android:id="@+id/btnCareerAlumni" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Career &amp; Alumni" android:textAllCaps="false" android:layout_margin="4dp" />
+            </GridLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available Units to Register:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerUnits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

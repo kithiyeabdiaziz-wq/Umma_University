@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#F0F0F0"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/tvAdminCompReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reg: S123"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvAdminCompMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Issue..."
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvAdminCompStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Pending"
+        android:textColor="#FF9800"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/btnResolveComplaint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark as Resolved"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

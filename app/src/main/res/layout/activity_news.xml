@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="News &amp; Communication Hub"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- EMERGENCY ALERT -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFCDD2"
+            android:textColor="#B71C1C"
+            android:padding="12dp"
+            android:textStyle="bold"
+            android:text="🚨 EMERGENCY ALERT: Campus-wide power outage scheduled for Saturday 8 AM - 2 PM."
+            android:layout_marginBottom="16dp" />
+
+        <!-- UPCOMING EVENTS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 Upcoming Events &amp; Graduation"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Tech Conference: 15th Nov, Main Auditorium\n• Graduation Ceremony: 20th Dec, Graduation Square\n• Department of CS Seminar: 25th Nov, LT-4"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- DEPARTMENT NOTICES -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📢 Official Announcements"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <!-- Recycler for dynamic announcements from Admin -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- CONTACT / INQUIRY -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✉️ Contact a Department"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etInquiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your inquiry here..."
+            android:minLines="3"
+            android:gravity="top"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnSubmitInquiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Inquiry"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

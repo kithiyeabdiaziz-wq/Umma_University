@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Campus Facilities &amp; Services"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Campus Map -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🗺️ Campus Map &amp; Locations"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Main Library: Block C\n• Admin Block: Main Gate Entrance\n• Health Center: Behind Hostel B\n• Cafeteria: Student Center, Ground Floor"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Transport -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚌 Transport Schedule"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Campus Shuttle (Route A): Main Gate → Library → Hostels (Every 30 mins)\n• Town Route: Campus → City Center (Departs 8 AM &amp; 5 PM)."
+            android:layout_marginBottom="16dp" />
+
+        <!-- Cafeteria -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🍔 Cafeteria Menu &amp; Hours"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Operating Hours: 7:00 AM - 8:00 PM\nToday's Menu:\n• Breakfast: Tea, Chapati, Mandazi\n• Lunch: Rice &amp; Beans, Ugali &amp; Sukuma, Pilau\n• Dinner: Spaghetti, Beef Stew"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Sports & Clubs -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚽ Sports, Clubs &amp; Societies"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Sports: Football (Tue/Thu), Basketball (Wed), Athletics (Fri).\n• Clubs: Debate Club, Tech Society, Drama Club, Environment Club."
+            android:layout_marginBottom="16dp" />
+
+        <!-- Health & Counselling -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏥 Health, Counselling &amp; Support"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Health Center: Open 24/7. Emergency Line: 0712-000-000\n• Counselling: Free sessions available every Tuesday &amp; Thursday at the Student Center.\n• Disability Support: Ramps available at all major buildings. Contact support@umma.ac.ke for specialized assistance."
+            android:layout_marginBottom="16dp" />
+
+        <!-- HOSTEL APPLICATION FORM -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏠 Hostel Application"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Application is currently OPEN. Fill the form below to apply for accommodation."
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etHostelRoomType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Preferred Room Type (e.g., Single, Double)" />
+
+        <EditText
+            android:id="@+id/etHostelSpecialNeeds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Special Needs (Optional)"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnApplyHostel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Hostel Application"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
