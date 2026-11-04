@@ -128,45 +128,52 @@
 
             </LinearLayout>
 
-            <!-- JOBS & CAREERS TAB (Placeholder) -->
+            <!-- JOBS & CAREERS TAB -->
             <LinearLayout
                 android:id="@+id/layoutJobs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:visibility="gone">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Internships &amp; Job Opportunities"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No new job postings at the moment. Check back later!"
-                    android:layout_marginTop="8dp" />
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- THIS IS THE MISSING RECYCLER VIEW -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerJobs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <!-- ALUMNI TAB (Placeholder) -->
+            <!-- ALUMNI TAB -->
             <LinearLayout
                 android:id="@+id/layoutAlumni"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:visibility="gone">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Alumni Network"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Connect with fellow UMMA graduates. Register for the alumni database below."
                     android:layout_marginTop="8dp" />
+
                 <Button
+                    android:id="@+id/btnRegisterAlumni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Register as Alumni"

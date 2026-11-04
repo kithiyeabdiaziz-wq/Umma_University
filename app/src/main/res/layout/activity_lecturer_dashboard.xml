@@ -2,24 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA">
+    android:background="#F5F7FA">
 
     <!-- TOP BAR -->
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:orientation="horizontal"
+        android:padding="20dp"
         android:background="#FFFFFF"
         android:elevation="4dp"
+        android:gravity="center_vertical"
         android:layout_alignParentTop="true">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_centerVertical="true">
-
+            android:layout_weight="1"
+            android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -27,7 +28,6 @@
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:textColor="#333333" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
                 android:layout_marginTop="2dp" />
         </LinearLayout>
 
-        <!-- PROFILE BUTTON AT TOP RIGHT -->
+        <!-- PROFILE BUTTON (Top Right) -->
         <Button
             android:id="@+id/btnLecProfile"
             android:layout_width="wrap_content"
@@ -46,12 +46,10 @@
             android:textSize="12sp"
             android:textAllCaps="false"
             android:backgroundTint="#673AB7"
-            android:textColor="#FFFFFF"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true" />
-    </RelativeLayout>
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
 
-    <!-- MAIN CONTENT (Recycler View) -->
+    <!-- LIST OF UNITS -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerLecUnits"
         android:layout_width="match_parent"

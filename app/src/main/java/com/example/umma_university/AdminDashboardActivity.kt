@@ -67,7 +67,9 @@ class AdminDashboardActivity : AppCompatActivity() {
         val layoutHelpDesk = findViewById<LinearLayout>(R.id.layoutHelpDesk)
         val layoutReports = findViewById<LinearLayout>(R.id.layoutReports)
         val layoutAdmissions = findViewById<LinearLayout>(R.id.layoutAdmissions)
+        val layoutJobs = findViewById<LinearLayout>(R.id.layoutJobs) // NEW
 
+        // TABS
         tabLayout.addTab(tabLayout.newTab().setText("Courses"))
         tabLayout.addTab(tabLayout.newTab().setText("Units"))
         tabLayout.addTab(tabLayout.newTab().setText("Lecturers"))
@@ -78,6 +80,7 @@ class AdminDashboardActivity : AppCompatActivity() {
         tabLayout.addTab(tabLayout.newTab().setText("Help Desk"))
         tabLayout.addTab(tabLayout.newTab().setText("Reports"))
         tabLayout.addTab(tabLayout.newTab().setText("Admissions"))
+        tabLayout.addTab(tabLayout.newTab().setText("Jobs")) // NEW
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
@@ -91,6 +94,7 @@ class AdminDashboardActivity : AppCompatActivity() {
                 layoutHelpDesk.visibility = View.GONE
                 layoutReports.visibility = View.GONE
                 layoutAdmissions.visibility = View.GONE
+                layoutJobs.visibility = View.GONE // NEW
 
                 when (tab?.position) {
                     0 -> layoutCourse.visibility = View.VISIBLE
@@ -103,6 +107,7 @@ class AdminDashboardActivity : AppCompatActivity() {
                     7 -> layoutHelpDesk.visibility = View.VISIBLE
                     8 -> layoutReports.visibility = View.VISIBLE
                     9 -> layoutAdmissions.visibility = View.VISIBLE
+                    10 -> layoutJobs.visibility = View.VISIBLE // NEW
                 }
             }
             override fun onTabUnselected(tab: TabLayout.Tab?) {}
@@ -391,7 +396,6 @@ class AdminDashboardActivity : AppCompatActivity() {
                         }
                         val averageMark = if (resultCount > 0) totalMarks / resultCount else 0.0
 
-                        // FIXED: Used safe string formatting to clear all warnings
                         tvReportResults.text = String.format(Locale.US,
                             "📊 UMMA UNIVERSITY SYSTEM REPORT\n\n" +
                                     "Total Enrolled Students: %d\n\n" +
@@ -407,10 +411,39 @@ class AdminDashboardActivity : AppCompatActivity() {
             }
         }
 
-        // --- 9. ADMISSIONS (NEW) ---
+        // --- 9. ADMISSIONS ---
         val btnOpenAdmissions = findViewById<Button>(R.id.btnOpenAdmissions)
         btnOpenAdmissions.setOnClickListener {
             startActivity(Intent(this, AdminAdmissionsActivity::class.java))
+        }
+
+        // --- 10. JOBS (NEW) ---
+        val etJobTitle = findViewById<EditText>(R.id.etJobTitle)
+        val etJobCompany = findViewById<EditText>(R.id.etJobCompany)
+        val etJobDescription = findViewById<EditText>(R.id.etJobDescription)
+        val btnPostJob = findViewById<Button>(R.id.btnPostJob)
+
+        btnPostJob.setOnClickListener {
+            val title = etJobTitle.text.toString().trim()
+            val company = etJobCompany.text.toString().trim()
+            val desc = etJobDescription.text.toString().trim()
+
+            if (title.isEmpty() || company.isEmpty() || desc.isEmpty()) {
+                Toast.makeText(this, "Fill all job fields", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val job = JobPost(title = title, company = company, description = desc)
+            FirebaseFirestore.getInstance().collection("jobs").add(job)
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Job Posted Successfully!", Toast.LENGTH_SHORT).show()
+                    etJobTitle.text.clear()
+                    etJobCompany.text.clear()
+                    etJobDescription.text.clear()
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_LONG).show()
+                }
         }
     }
 }
